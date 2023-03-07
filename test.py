@@ -16,7 +16,7 @@ data = response.json()                                          #sets data as th
 response = requests.get(BASE + "/factorial/4")
 data = response.json()
 
-response = requests.get(BASE + "/factorial/0")
+response = requests.get(BASE + "/factorial/00")
 data = response.json()
 
 #############################
@@ -46,5 +46,5 @@ data = response.json()
 #############################
 ##### Slack-Alert Test
 
-response = requests.get(BASE + "/slack-alert/2nd Test")
-data = response.json()
+#response = requests.get(BASE + "/slack-alert/2nd Test")
+#data = response.json()
