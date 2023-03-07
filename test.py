@@ -36,6 +36,27 @@ data = response.json()
 response = requests.get(BASE + "/is-prime/1")
 data = response.json()
 
+
+response = requests.get(BASE + "/is-prime/89")
+data = response.json()
+
+
+response = requests.get(BASE + "/is-prime/107")
+data = response.json()
+
+
+response = requests.get(BASE + "/is-prime/131")
+data = response.json()
+
+
+response = requests.get(BASE + "/is-prime/151")
+data = response.json()
+
+
+response = requests.get(BASE + "/is-prime/179")
+data = response.json()
+
+
 #############################
 # Fibonacci test
 
