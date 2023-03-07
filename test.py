@@ -1,88 +1,200 @@
 import requests
 
-BASE = "http://0.0.0.0:4000"                                  #local host:port declared to connect with API
 
+errors = 0
 
 #############################
 # md5 test 
 
-response = requests.get(BASE + "/md5/Hello World")              #sends URI to API
-data = response.json()                                          #sets data as the json output
-                                              
-response = requests.get(BASE + "/md5/   ")             
-data = response.json()  
+response = requests.get("http://localhost:4000/md5/Hello World")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/md5/^*&#^#*$#")             
-data = response.json()  
+response = requests.get("http://localhost:4000/md5/    white   space")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/md5/test_case-354_324532_-=")             
-data = response.json()  
+response = requests.get("http://localhost:4000/md5/37258943570265410")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/md5/blank     space")             
-data = response.json()  
+response = requests.get("http://localhost:4000/md5/String_Value")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/md5/1247893574389725802543")             
-data = response.json()  
+response = requests.get("http://localhost:4000/md5/GROUP4 TEST CASES")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/md5/mvdbmnbsjbn . bjk.g nr n")             
-data = response.json()  
-
-response = requests.get(BASE + "/md5/Test Cases Above were generated using random characters from keyboard")             
-data = response.json()  
 
 #############################
-# Factorial test
+# factorial test 
 
-response = requests.get(BASE + "/factorial/4")
+response = requests.get("http://localhost:4000/factorial/HelloWorld")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/factorial/00")
+response = requests.get("http://localhost:4000/factorial/123553")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/factorial/words")
+response = requests.get("http://localhost:4000/factorial/   white space  ")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/factorial/blank   space   ")
+response = requests.get("http://localhost:4000/factorial/true")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/factorial/true")
+response = requests.get("http://localhost:4000/factorial/stringvalue")
 data = response.json()
-
-response = requests.get(BASE + "/factorial/false")
-data = response.json()
-
-response = requests.get(BASE + "/factorial/-345682934")
-data = response.json()
-
-response = requests.get(BASE + "/factorial/Test cases above were randomly generated.")
-data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
 #############################
-# Is-prime test
+# fibonacci test 
 
-response = requests.get(BASE + "/is-prime/10")
+response = requests.get("http://localhost:4000/fibonacci/2355463")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/is-prime/7")
+response = requests.get("http://localhost:4000/fibonacci/Hello World")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/is-prime/1")
+response = requests.get("http://localhost:4000/fibonacci/     white  space  ")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
+
+response = requests.get("http://localhost:4000/fibonacci/-239402548032")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
+
+response = requests.get("http://localhost:4000/fibonacci/-0")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
 #############################
-### Fibonacci test
+# is prime test 
 
-response = requests.get(BASE + "/fibonacci/20")
+response = requests.get("http://localhost:4000/is-prime/Hello World")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/fibonacci/100")
+response = requests.get("http://localhost:4000/is-prime/32478329481")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
-response = requests.get(BASE + "/fibonacci/0")
+response = requests.get("http://localhost:4000/is-prime/         White Space    ")
 data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
+
+response = requests.get("http://localhost:4000/is-prime/stringvalue")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
+
+response = requests.get("http://localhost:4000/is-prime/true")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
 
 #############################
-##### Slack-Alert Test
+# slack alert 
 
-#response = requests.get(BASE + "/slack-alert/2nd Test")
-#data = response.json()
+response = requests.get("http://localhost:4000/slack-alert/Post this string into our Slack Channel to test API functionality")
+data = response.json()
+if response.status_code == 200:
+    print("Test Passed")
+else:
+    print("Test Failed")
+    errors += 1
+
+
+def noErrors():
+    return 0
+
+if errors == 0:
+    noErrors()
+else:
+    print("You have errors within your API. Edit accordingly and rerun test file!")
+
+
+
