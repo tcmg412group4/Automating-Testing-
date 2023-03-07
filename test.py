@@ -8,7 +8,27 @@ BASE = "http://0.0.0.0:4000"                                  #local host:port d
 
 response = requests.get(BASE + "/md5/Hello World")              #sends URI to API
 data = response.json()                                          #sets data as the json output
-                                                   #prints output
+                                              
+response = requests.get(BASE + "/md5/   ")             
+data = response.json()  
+
+response = requests.get(BASE + "/md5/^*&#^#*$#")             
+data = response.json()  
+
+response = requests.get(BASE + "/md5/test_case-354_324532_-=")             
+data = response.json()  
+
+response = requests.get(BASE + "/md5/blank     space")             
+data = response.json()  
+
+response = requests.get(BASE + "/md5/1247893574389725802543")             
+data = response.json()  
+
+response = requests.get(BASE + "/md5/mvdbmnbsjbn . bjk.g nr n")             
+data = response.json()  
+
+response = requests.get(BASE + "/md5/Test Cases Above were generated using random characters from keyboard")             
+data = response.json()  
 
 #############################
 # Factorial test
@@ -17,6 +37,24 @@ response = requests.get(BASE + "/factorial/4")
 data = response.json()
 
 response = requests.get(BASE + "/factorial/00")
+data = response.json()
+
+response = requests.get(BASE + "/factorial/words")
+data = response.json()
+
+response = requests.get(BASE + "/factorial/blank   space   ")
+data = response.json()
+
+response = requests.get(BASE + "/factorial/true")
+data = response.json()
+
+response = requests.get(BASE + "/factorial/false")
+data = response.json()
+
+response = requests.get(BASE + "/factorial/-345682934")
+data = response.json()
+
+response = requests.get(BASE + "/factorial/Test cases above were randomly generated.")
 data = response.json()
 
 #############################
@@ -32,7 +70,7 @@ response = requests.get(BASE + "/is-prime/1")
 data = response.json()
 
 #############################
-# Fibonacci test
+### Fibonacci test
 
 response = requests.get(BASE + "/fibonacci/20")
 data = response.json()
