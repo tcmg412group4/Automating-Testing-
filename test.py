@@ -1,5 +1,6 @@
 import requests
 
+
 BASE = "http://0.0.0.0:4000"                                  #local host:port declared to connect with API
 
 
@@ -56,7 +57,7 @@ data = response.json()
 
 
 response = requests.get(BASE + "/fibonacci/500")
-data = response.json()s
+data = response.json()
 
 #############################
 # Slack-Alert Test
