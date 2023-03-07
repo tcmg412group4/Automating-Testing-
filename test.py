@@ -58,6 +58,19 @@ data = response.json()
 response = requests.get(BASE + "/fibonacci/500")
 data = response.json()
 
+
+response = requests.get(BASE + "/fibonacci/1000")
+data = response.json()
+
+
+response = requests.get(BASE + "/fibonacci/5000")
+data = response.json()
+
+
+response = requests.get(BASE + "/fibonacci/10000")
+data = response.json()
+
+
 #############################
 # Slack-Alert Test
 
